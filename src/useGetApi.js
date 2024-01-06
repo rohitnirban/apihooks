@@ -22,11 +22,11 @@ export const useGetApi = (urlPath, headers) => {
         };
 
         fetchData();
-    }, [urlPath]);
+    }, []);
 
     return {
         isLoading,
         error,
-        data,
+        data: data ? data : null,
     };
 };

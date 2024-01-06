@@ -5,7 +5,8 @@ export const usePostApi = (urlPath, sendingData = null, headers) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
   const [data, setData] = useState(null);
-  const [postData, setPostData] = useState(sendingData);
+  const [postData, setPostData] = useState(null);
+  setPostData(sendingData)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,12 +25,11 @@ export const usePostApi = (urlPath, sendingData = null, headers) => {
     if (data !== null) {
       fetchData();
     }
-  }, [urlPath, data]);
+  }, []);
 
   return {
     isLoading,
     error,
-    setPostData, // This allows you to set data externally if needed
-    data,
+    data: data ? data : null,
   };
 };
