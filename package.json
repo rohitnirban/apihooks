@@ -1,7 +1,11 @@
 {
   "name": "@rohitnirban/apihooks",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Custom React hooks for fetching and posting data",
+  "exports": {
+    "./useGetApi": "./src/useGetApi.js",
+    "./usePostApi": "./src/usePostApi.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
