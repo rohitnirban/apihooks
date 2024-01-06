@@ -1,8 +1,11 @@
 {
   "name": "@rohitnirban/apihooks",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Custom React hooks for fetching and posting data",
+  "main": "src/index.js",
+  "module": "src/index.js",
   "exports": {
+    ".": "./src/index.js",
     "./useGetApi": "./src/useGetApi.js",
     "./usePostApi": "./src/usePostApi.js"
   },
