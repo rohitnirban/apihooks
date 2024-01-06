@@ -4,7 +4,7 @@ import axios from "axios";
 export const useGetApi = (urlPath, headers) => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(false);
-    const [data, setData] = useState({});  // Initialize as empty object
+    const [data, setData] = useState({});
 
     useEffect(() => {
         setIsLoading(true);

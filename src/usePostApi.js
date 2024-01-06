@@ -25,7 +25,7 @@ export const usePostApi = (urlPath, sendingData = null, headers) => {
     if (data !== null) {
       fetchData();
     }
-  }, []);
+  }, [urlPath, sendingData, headers]);
 
   return {
     isLoading,
