@@ -4,8 +4,7 @@ import axios from "axios";
 export const useGetApi = (urlPath, headers) => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(false);
-    const [data, setData] = useState(null);
-
+    const [data, setData] = useState({});  // Initialize as empty object
 
     useEffect(() => {
         setIsLoading(true);
@@ -22,11 +21,11 @@ export const useGetApi = (urlPath, headers) => {
         };
 
         fetchData();
-    }, []);
+    }, [urlPath, headers]); 
 
     return {
         isLoading,
         error,
-        data: data ? data : null,
+        data,
     };
 };
