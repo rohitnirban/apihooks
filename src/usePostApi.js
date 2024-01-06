@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const usePostApi = (urlPath, sendingData = null, headers) => {
+export const usePostApi = (urlPath, sendingData = null, headers) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
   const [data, setData] = useState(null);
@@ -33,5 +33,3 @@ const usePostApi = (urlPath, sendingData = null, headers) => {
     data,
   };
 };
-
-export default usePostApi;

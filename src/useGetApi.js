@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const useGetApi = (urlPath, headers) => {
+export const useGetApi = (urlPath, headers) => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(false);
     const [data, setData] = useState(null);
@@ -30,5 +30,3 @@ const useGetApi = (urlPath, headers) => {
         data,
     };
 };
-
-export default useGetApi;
